@@ -1,0 +1,51 @@
+﻿BundleFormat: 1
+Name: Contacts
+Description: Contact Name Expansion
+Author: Gary Furash
+TitleMatch: 
+Patterns:
+- LLPart1: Application Administrator
+  LLPart2: contact - aad
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: Joyce Laudenslager
+  LLPart2: contact - jla
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: Diane Matsumoto
+  LLPart2: contact - dma
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: Priscilla Siquieros
+  LLPart2: contact - psi
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: Priscilla Siquieros
+  LLPart2: contact - psi
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: James Zielinski
+  LLPart2: jzi
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: Rafael Garcia
+  LLPart2: rga
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: Kathy Mack
+  LLPart2: kma
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: Gary Furash
+  LLPart2: gfu
+  LLKey: 
+  LLShorthand: 
+  LLScript: 

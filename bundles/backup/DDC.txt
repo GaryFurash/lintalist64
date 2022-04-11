@@ -1,0 +1,199 @@
+﻿BundleFormat: 1
+Name: Desert Diamond Casino
+Description: DDC Custom Snippets (not code)
+Author: Gary furash
+TitleMatch: 
+Patterns:
+- LLPart1: {[[Input=Project]]} Moved to Production, Review Requested
+
+Outcome: [[Input=Outcome]] 
+
+The above project has been moved to [[Input=Application]] Production. Please review and verify that it is working as expected and contact me with confirmation of that fact OR any problems you encountered.
+
+Comments:
+  LLPart2: email - moved to production
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: http://cpshrstgweb01.desertdiamondcasino.com:9070/psp/hrsup/EMPLOYEE/HRMS/?cmd=logout
+  LLPart2: url - PeopleSoft HR 9.2 Support
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: https://cpsfsstgweb01.desertdiamondcasino.com:8053/psp/fsstg/EMPLOYEE/ERP/?cmd=logout
+  LLPart2: url - PeopleSoft FS 9.2 Staging
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: [[Input=PROJECT]] Ready for Testing ([[DateTime=MM/dd/yyyy|14|Days]])
+
+Outcome: [[Input=OUTCOME]]
+
+The above work has been complete and is available for testing in <<target system>>
+ 
+Please complete testing no later than [[DateTime=MM/dd/yyyy|14|Days]]. In order to move to production, please reply with an email indicating that you have tested it and that it is ready to move to production. If you are not a manager, please have one of your managers reply with an approval to move to production.
+ 
+If you have any questions, comments or concerns, please feel free to contact me (Gary Furash), specifying the Ivanti ticket above, at x1641 or gffurash@ddcaz.com.
+
+Additional Notes:
+  LLPart2: email - ready for user testing
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: pjejurikar@gravitonconsulting.com; kchahar@gravitonconsulting.com; nmrinal@gravitonconsulting.com; athakar@gravitonconsulting.com; ssridharan@gravitonconsulting.com; vmamnani@gravitonconsulting.com; cvij@gravitonconsulting.com; zmartin@gravitonconsulting.com;jkok@gravitonconsulting.com
+  LLPart2: email - graviton 9.2
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: Gary Furash - IT PeopleSoft Developer - gffurash@ddcaz.com - 520-342-1641 (w), 520-907-2470 (m)
+  LLPart2: text - short work signature
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: Query Tree Security
+Add the following records to the QUERY_TREE_* query security tree
+
+DDC_TIP_TRANS
+
+1.	Main Menu > PeopleTools  > Security > Query Security > Query Access Manager
+2.	Search By = Tree Name
+3.	Tree Name = QUERY_TREE_DDC_PY
+4.	Search Button
+5.	(BAS_ACCESS_GROUP) Insert Child Record button (paper w/ + sign)
+6.	Record Name = [record name]
+7.	Add button
+8.	Save button
+If you get the error “Duplicate instances of node name …” click OK and skip this table and go to the next one.
+  LLPart2: text - migration instructions query tree
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: https://cpsfsprdweb01.desertdiamondcasino.com:8050/psp/fsprd/EMPLOYEE/ERP/?cmd=logout
+  LLPart2: url - peoplesoft fs 9.2 production
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: http://ddcpsupg1.desertdiamondcasino.com:8040/psp/FSSUP91/?cmd=login&languageCd=ENG&
+  LLPart2: url - PeopleSoft FS 9.1 Support
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: 1.	Navigate to https://cpsfsprdweb01.desertdiamondcasino.com:8050/psp/fsprd/EMPLOYEE/ERP/?cmd=logout in microsoft edge
+2.	Click on the Padlock symbol to the left of https:// in the browser bar
+3.	Click on the row that says Cookies >
+4.	For each row that says (something).desertdiamondcasino.com, click on it and click Remove
+5.	Click done
+  LLPart2: clear edge cache
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: 8520342
+  LLPart2: text - ddc phone prefix
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: http://ddcpsfs1.desertdiamondcasino.com:8000/psp/fsprd91/?cmd=login
+  LLPart2: url - PeopleSoft FS 9.1 Production
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: Please refresh database [[Choice=HRDEV92|HRTST92|HRSTG92|HRSUP92|FSDEV91|FSTST91|FSSTG91|FSSUP91]] on [[Choice=DDCPSDEVDB2|DDCPSUPGDB02|CPSDEVDB01|CPSSTGDB01]] from the [[Choice=NEW copy|latest standard backup]] of [[Choice=HRPRD92|FSPRD91]] on [[Choice=DDCPSDB2|CPSPRDDB01]]. The application server (should) be shut down. Please contact me (Gary Furash) when complete.
+  LLPart2: text - refresh database
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: https://cpshrstgweb01.desertdiamondcasino.com:8075/psp/hrstg/?cmd=login&languageCd=ENG&
+  LLPart2: url - PeopleSoft HR 9.2 Staging
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: ☺
+  LLPart2: peoplesoft - tips entry special symbol
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: Application Administrators
+  LLPart2: person - aa
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: http://ddcpsdevfs1.desertdiamondcasino.com:8050/psp/fstst91/EMPLOYEE/ERP/?cmd=logout
+  LLPart2: url - PeopleSoft FS 9.1 Test
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: ☺
+  LLPart2: character - alt numberpad 1
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: Collection Name: Desert Diamond Casino
+Project: Miscellaneous SSRS Reports
+Reports: Report Project / Report Name
+Permissions:
+Additional Information:
+
+Please add a subscription for each report as follows: 
+Recipients:
+Parameters:
+Frequency: 
+
+
+
+Instructions for deployment is in the iVanti knowledge area. The document is called "SSRS Deployment for App Admins".
+
+Please let me know if you have any questions.
+  LLPart2: email - ssrs report deployment
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: http://ddcpsdevfs1.desertdiamondcasino.com:8030/psp/fsdev91/?cmd=login&errorCode=105&languageCd=ENG
+  LLPart2: url - PeopleSoft FS 9.1 Development
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: http://cpshrdevweb01.desertdiamondcasino.com:18060/psp/hrtst/EMPLOYEE/HRMS/?cmd=logout
+  LLPart2: url - PeopleSoft HR 9.2 Test
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: http://ddcphire01.desertdiamondcasino.com:8000/psp/phireprd/?cmd=login&languageCd=ENG
+  LLPart2: url - Phire Server
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: https://cpsfsdevweb01.desertdiamondcasino.com:8083/psp/fstst/EMPLOYEE/ERP/?cmd=logout
+  LLPart2: url - PeopleSoft FS 9.2 Test
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: Hi Coordinators. Can you have someone work with GMJUAN to clear her browser cache.
+
+If she uses CHROME or EDGE when she navigates to the site
+1. Click the field (might say "not secure") to the left of the address bar
+2. Click cookies
+3. Click on each value and click remove.
+4. Close browser
+
+If she uses INTERNET EXPLORER
+1. Open IE
+2. Alt-T
+3. General Tab
+4. Delete button
+5. Check all Boxes
+6. Delete button
+7. Close IE. Close OUTLOOK
+  LLPart2: email - clear cache instructions
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: 520-342-1641
+  LLPart2: info - work phone
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: http://cpshrdevweb01.desertdiamondcasino.com:18060/psp/hrdev/EMPLOYEE/HRMS/?cmd=logout
+  LLPart2: url - PeopleSoft HR 9.2 Development
+  LLKey: 
+  LLShorthand: 
+  LLScript: 

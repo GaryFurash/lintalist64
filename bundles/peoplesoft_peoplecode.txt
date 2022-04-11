@@ -1,0 +1,193 @@
+﻿BundleFormat: 1
+Name: PeopleSoft PeopleCode
+Description: PeopleCode Snippets
+Author: Gary Furash
+TitleMatch: 
+Patterns:
+- LLPart1: /******************************************************************************
+ *
+ *****************************************************************************/
+  LLPart2: peoplecode - java block comment
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: WriteToLog(%ApplicationLogFence_Error, &Err.ToString());
+  LLPart2: peoplecode - writetolog
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: /**
+ * << description >>
+ * 
+ * @param
+ * @return
+ * @exception none
+ */
+  LLPart2: peoplecode - method comment
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: [[DateTime=MM/dd/yyyy]] gffurash [[INPUT=Request ID]] - [[INPUT=Comment]]
+  LLPart2: peoplecode - history comment
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: REM import DDC_UTILITY:EXCEPTION:IllegalArgumentException;
+
+/**
+ * 
+ *
+ * Usage:
+ *
+ * Modification History
+ * --------------------
+ * [[DateTime=MM/dd/yyyy]] gffurash [[INPUT=Request ID]] - created
+ */
+class [[Input=classname]]
+   method [[Input=classname]](); /* Constructor */
+end-class;
+
+/*****************************************************************************
+ * DECLARATIONS (GLOBAL/COMPONENT VARIABLES, FUNCTIONS)
+ *****************************************************************************/
+
+/*****************************************************************************
+ * CONSTRUCTOR
+ *****************************************************************************/
+
+/**
+ * @param
+ * @exception
+ */
+method [[Input=classname]]
+
+end-method;
+
+/*****************************************************************************
+ * METHODS
+ *****************************************************************************/
+
+/*****************************************************************************
+ * PROPERTIES (GET)
+ *****************************************************************************/
+
+/*****************************************************************************
+ * PROPERTIES (SET)
+ *****************************************************************************/
+  LLPart2: peoplecode - class template
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: import TTS_UNITTEST:TestBase;
+import [[Input=ClassUnderTest]];
+
+[[Input=ClassUnderTest]]
+
+class [[Input=ClassUnderTest]]Test extends TTS_UNITTEST:TestBase
+   method [[Input=ClassUnderTest]]Test();
+   method Run();
+   method SetUp();
+   method TearDown();
+private
+   method TestMethod1();
+   method Obverse(&InValue As boolean) Returns boolean;
+end-class;
+
+/*****************************************************************************
+ * Constructor
+ *****************************************************************************/
+
+method [[Input=ClassUnderTest]]Test
+   %Super = create TTS_UNITTEST:TestBase("BalanceIDTemplateTest");
+end-method;
+
+/*****************************************************************************
+ * Framework Implementation
+ *****************************************************************************/
+method Run
+   /+ Extends/implements TTS_UNITTEST:TestBase.Run +/
+   %This.TestMethod1();
+end-method;
+
+method SetUp
+   /+ Extends/implements TTS_UNITTEST:TestBase.Setup +/
+end-method;
+
+method TearDown
+   /+ Extends/implements TTS_UNITTEST:TestBase.Teardown +/
+end-method;
+
+/*****************************************************************************
+ * Tests
+ *****************************************************************************/
+
+method TestMethod1
+   /* Arrange, Act, Assert */
+end-method;
+
+/*****************************************************************************
+ * Utility Methods
+ *****************************************************************************/
+
+method Obverse
+   /+ &InValue as Boolean +/
+   /+ Returns Boolean +/
+   If &InValue = True Then
+      Return False;
+   Else
+      Return True;
+   End-If;
+end-method;
+  LLPart2: peoplecode - unit test template
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: import PS_PT:Integration:IRequestHandler;
+
+class GetEmployeesHandler implements PS_PT:Integration:IRequestHandler
+   method OnRequest(&request As Message) Returns Message;
+   
+end-class;
+
+
+method OnRequest
+   /+ &request as Message +/
+   /+ Returns Message +/
+   /+ Extends/implements PS_PT:Integration:IRequestHandler.OnRequest +/
+   REM ** TODO: Update operation name;
+   Local Message &response = CreateMessage(Operation.<OPERATION_NAME>, %IntBroker_Response);
+   
+   REM ** TODO: Implementation Code Goes here;
+   
+   Return &response;
+end-method;
+  LLPart2: peoplecode - integration broker request handler
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: import PT_RCF:ServiceInterface;
+
+class ChangeClassNameToEventName extends PT_RCF:ServiceInterface
+   method execute();
+end-class;
+
+method execute
+   /+ Extends/implements PT_RCF:ServiceInterface.execute +/
+   
+   REM ** Code goes here;
+end-method;
+  LLPart2: peoplecode - event mapping for component
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: class [[Input=exception]]Exception extends Exception
+   method CUDActionFailureException(&message as string);
+end-class;
+
+method [[Input=exception]]Exception
+   %Super = CreateException(10000, 1, "message not found", &message);
+end-method;
+  LLPart2: peoplecode - exception class
+  LLKey: 
+  LLShorthand: 
+  LLScript: 

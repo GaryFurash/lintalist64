@@ -1,0 +1,19 @@
+# ignore: directories
+/docs
+/extras
+/icons
+/include
+/plugins
+/themes
+/tmpscrpts
+
+# ignore: files
+*.ahk
+*.exe
+changelog.md
+AltPaste.ini
+license.txt
+multicaret.ini
+session.ini
+Sound.ini
+version.ini

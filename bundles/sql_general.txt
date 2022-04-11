@@ -1,0 +1,227 @@
+﻿BundleFormat: 1
+Name: SQL General
+Description: General SQL Snippets
+Author: Gary Furash
+TitleMatch: 
+Patterns:
+- LLPart1: SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED;
+  LLPart2: SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED;
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: if object_id('tempdb..#[[Input=name]]') is not null drop table #[[Input=name]]
+  LLPart2: sql - drop temporary table
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: /*************************************************************************
+     *  Definition: 
+     * Description: 
+     *      Tables: 
+     *     Effects:
+     *  Parameters:
+     *     Returns:
+     *       Usage:
+     * ***********************************************************************
+     * Date        Author              Comments
+     * ----------  ------              --------
+     * [[DateTime=yyyy-MM-dd]]  Gary Furash         Created
+     *************************************************************************/
+  LLPart2: sql - program comment
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: -------------------------------------------------------------------------------
+--
+-------------------------------------------------------------------------------
+  LLPart2: sql - Block Comment
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: CREATE PROCEDURE [dbo].[usp_MakeTextCommonColumns]
+    @FirstSchema        varchar(128)
+  , @FirstTableName     varchar(128)
+  , @SecondSchema       varchar(128)
+  , @SecondTableName    varchar(128)
+  , @Result             varchar(max) OUTPUT
+AS
+BEGIN
+    /*************************************************************************
+     * Procedure:    dbo.[usp_MakeTextCommonColumns]
+     * Description:  Given 2 tables, return a ',' separated list of common
+     *               columns
+     * Called By:    N/A
+     * Tables:       system metadata
+     * Parameter(s): @FirstSchema   first table schema
+     *               @TableName     first table name
+     *               @SecondSchema  first table schema
+     *               @TableName     second table name
+     * Returns:      List of common columns
+     * Usage:        DECLARE @Columns VARCHAR(MAX);
+     *               EXEC [dbo].[usp_MakeTextCommonColumns] 'dbo', 'device',
+     *                  'bak', 'device_del',  @Columns OUTPUT
+     * ***********************************************************************
+     * Date        Author              Comments
+     * ----------  ------              --------
+     * 11/17/2021  Gary Furash         Created
+     *************************************************************************/
+
+    SET NOCOUNT ON
+
+    SET @Result = ''
+
+    SELECT @Result = STRING_AGG( ISNULL(A.COLUMN_NAME, ' '), ', ')
+    FROM INFORMATION_SCHEMA.COLUMNS A
+    WHERE A.TABLE_SCHEMA = @FirstSchema
+      AND A.TABLE_NAME = @FirstTableName
+      AND EXISTS (
+            SELECT 1
+            FROM INFORMATION_SCHEMA.COLUMNS B
+            WHERE B.TABLE_SCHEMA = @SecondSchema
+              AND B.TABLE_NAME   = @SecondTableName
+              AND B.COLUMN_NAME  = A.COLUMN_NAME
+          )
+END
+  LLPart2: stored procedure
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: BEGIN TRANSACTION;
+
+SET XACT_ABORT ON;
+
+
+
+ROLLBACK;
+--COMMIT;
+  LLPart2: sql - simple transaction
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: DECLARE @ErrMsg NVarChar(4000), 
+        @ErrNum Int, 
+        @ErrSeverity Int, 
+        @ErrState Int, 
+        @ErrLine Int, 
+        @ErrProc NVarChar(200),
+        @MessageText NVarChar(4000),
+        @RowCount int;
+    
+BEGIN TRY
+    BEGIN TRANSACTION T1;
+
+    SET @RowCount = 1; /* @@RowCount */
+
+    IF @@ROWCOUNT <> 1
+    BEGIN
+        SET @MessageText = N'Incorrect number of DDC_COVID_EMP2 updated' + CAST(@@ROWCOUNT AS VARCHAR(10));
+        THROW 50000, @MessageText, 0;
+    END
+    ELSE
+        PRINT N'DDC_COVID_EMP2 Rows updated: ' + CAST(@@ROWCOUNT AS VARCHAR(10));
+
+    IF @@ROWCOUNT > 2
+        THROW 50000, 'Too many DDC_COVID_INST deleted', 0;
+    ELSE
+        PRINT N'DDC_COVID_INST Rows Deleted: ' + CAST (@@ROWCOUNT AS VARCHAR(10));
+        
+    COMMIT TRANSACTION T1
+END TRY
+BEGIN CATCH
+    SELECT @ErrNum = Error_Number(), 
+           @ErrSeverity = Error_Severity(), 
+           @ErrState = Error_State(), 
+           @ErrLine = Error_Line(), 
+           @ErrProc = IsNull(Error_Procedure(), '-')
+
+    SET @ErrMsg = N'ErrLine: ' + rtrim(@ErrLine) + ', proc: ' + RTRIM(@ErrProc) + ', 
+           Message: '+ Error_Message()
+
+    PRINT N'ROLLBACK: ' + SUBSTRING(@ErrMsg,1,4000)
+
+    ROLLBACK TRANSACTION T1;
+END CATCH;
+  LLPart2: sql - transaction-aware update
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: /******************************************************************************
+ * Object:             
+ * Description:        
+ * Called By:            
+ * Affected table(s):  
+ * Used By:            
+ * Parameter(s):       
+ * Usage:              
+ * ****************************************************************************
+ * Date                Author               Comments
+ * ----------- -------------------  -------------------------------------------
+ * [[DateTime=yyyy-MM-dd]]  Gary Furash          Created script
+ ******************************************************************************/
+  LLPart2: sql - header comment
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: CREATE FUNCTION [dbo].[ufn_GetMonthsBetweenDates]
+(
+    @StartDate datetime,
+    @EndDate datetime
+)
+RETURNS @result TABLE
+(
+    YearMonth CHAR(7) -- Month in yyyy-MM format
+)
+AS
+BEGIN
+    /*************************************************************************
+     * Procedure:    dbo.[ufn_GetMonthsBetweenDates]
+     * Description:  Given a begin and end date return all months in yyyy-MM
+     *               format between those dates inclusive
+     *               Notes no errors are thrown because side effect statements
+     *               are not supported in functions
+     * Called By:    N/A
+     * Tables:       None
+     * Used By:      N/A
+     * Parameter(s): @StartDate     Beginning Date
+     *               @EndDate       End Date (NULL = current date)
+     * Returns:      None
+     * Usage:        SELECT YearMonth
+     *               FROM [dbo].[ufn_GetMonthsBetweenDates]('2020-01-15', '2021-07-15')
+     * ***********************************************************************
+     * Date        Author              Comments
+     * ----------  ---------           ---------------------------------------
+     * 2021-09-28  Gary Furash         Created
+     *************************************************************************/
+
+    SET ANSI_NULLS ON
+    SET QUOTED_IDENTIFIER ON
+    SET NOCOUNT ON
+
+    /* Parameter handling */
+    IF @EndDate IS NULL
+        SET @EndDate = GetDate();
+
+    ;WITH CTE AS
+    (
+        SELECT CONVERT(DATE, @StartDate) AS Dates
+        UNION ALL
+        SELECT DATEADD(MONTH, 1, Dates)
+        FROM CTE
+        WHERE CONVERT(DATE, Dates) <= CONVERT(DATE, @EndDate)
+    )
+    INSERT INTO @result
+    SELECT FORMAT(Dates, 'yyyy-MM') FROM CTE
+    WHERE FORMAT(Dates, 'yyyy-MM') <= FORMAT(@EndDate, 'yyyy-MM')
+    OPTION (maxrecursion 0) ;
+
+    RETURN ;
+END
+  LLPart2: scalar function
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: SELECT TOP 100 * FROM
+  LLPart2: SELECT TOP 100 * FROM
+  LLKey: 
+  LLShorthand: 
+  LLScript: 

@@ -1,0 +1,35 @@
+﻿BundleFormat: 1
+Name: Todoist
+Description: Todoist Snippets
+Author: Gary Furash
+TitleMatch: 
+Patterns:
+- LLPart1: @project 📋 **{[[Input=project]]}**
+  LLPart2: todoist - project title
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: 📅 [Calendar] @pinned @defer [[Input=Event]] [[Input=DateTime]]
+  LLPart2: todoist - calendar event
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: **=REFERENCE=**
+
+**=PLANS=**
+
+**=HISTORY=**
+  LLPart2: todoist - project notes
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: [[[[Input=text]]]]([[Input=url]])
+  LLPart2: todoist - link
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: [[Input=linktext]]([[Input=hyperlink]])
+  LLPart2: todoist - hyperlink
+  LLKey: 
+  LLShorthand: 
+  LLScript: 

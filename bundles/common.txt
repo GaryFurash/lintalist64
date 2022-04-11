@@ -1,0 +1,171 @@
+﻿BundleFormat: 1
+Name: Common
+Description: Common replacements
+Author: Gary furash
+TitleMatch: 
+Patterns:
+- LLPart1: [[DateTime=yyyy-MM-dd]]
+  LLPart2: date - yyyy-MM-dd
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: [[DateTime=yyyy-MM-dd HH:mm]] -
+  LLPart2: date - journal
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: [[DateTime=MM/dd/yyyy]]
+  LLPart2: date - mm/dd/yyyy
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: ➡
+  LLPart2: character - arrow right
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: 📎
+  LLPart2: character - clipped
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: ♻
+  LLPart2: character - recurring task
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: furashgary@gmail.com
+  LLPart2: info - personal email
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: 520-907-2470
+  LLPart2: info - mobile phone
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: [[Selected=Upper]]
+  LLPart2: selection - upper case
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: ⏩
+  LLPart2: character - double right arrow
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: gffurash@ddcaz.com
+  LLPart2: info - work email
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: 🔺
+  LLPart2: character - delta
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: 👫
+  LLPart2: character - meeting, conversation
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: 📓
+  LLPart2: character - journal
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: ☐
+  LLPart2: character - checkbox
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: 🎯
+  LLPart2: character - project or goal
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: ☑
+  LLPart2: character - checkmark
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: 4771 North Warner Terrace, Tucson Arizona 85705
+  LLPart2: info - home address
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: Look into
+  LLPart2: text - li
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: ✂
+  LLPart2: character - snippet
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: 📚
+  LLPart2: character - reference
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: ⚡
+  LLPart2: character - problem or error
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: 📝
+  LLPart2: character - note
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: 📃
+  LLPart2: character - instructions, how to
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: ❗
+  LLPart2: character - big exclamation point
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: 🚩
+  LLPart2: character - flag
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: ●
+  LLPart2: character - bullet
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: ⏩
+  LLPart2: character - Ongoing Recurring Activity
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: add.task.721461.109415452.6679404b7a6a1411@todoist.net
+  LLPart2: info - todoist email
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: /* TODO: Remove */
+  LLPart2: TODO Comment: Remove
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: 🎯
+  LLPart2: character - target
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: 📅
+  LLPart2: character - character symbol
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: ↔
+  LLPart2: character - arrow bidirectional
+  LLKey: 
+  LLShorthand: 
+  LLScript: 

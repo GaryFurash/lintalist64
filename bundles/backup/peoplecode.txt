@@ -1,0 +1,40 @@
+﻿BundleFormat: 1
+Name: PeopleCode Snippets
+Description: PeopleCode Snippets
+Author: Gary FUrash
+TitleMatch: 
+Patterns:
+- LLPart1: /* [[DateTime=MM/dd/yyyy]] [[INPUT=Request ID]] gffurash - [[INPUT=Comment]] */
+  LLPart2: peoplecode - history comment
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: /**[[C=\n]]
+ * << description >>[[C=\n]]
+ *[[C=\n]]
+ * @param[[C=\n]]
+ * @return[[C=\n]]
+ * @exception none[[C=\n]]
+ */[[C=\n]]
+  LLPart2: peoplecode - method comment
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: sql - get current job record
+  LLPart2: JC.EFFDT = (
+        SELECT MAX(JC_ED.EFFDT)
+        FROM PS_JOB JC_ED
+        WHERE JC_ED.EMPLID   = JC.EMPLID
+          AND JC_ED.EMPL_RCD = JC.EMPL_RCD
+          AND JC_ED.EFFDT    <= GETDATE()
+      )
+  AND JC.EFFSEQ = (
+        SELECT MAX(JC_ES.EFFSEQ)
+        FROM PS_JOB JC_ES
+        WHERE JC_ES.EMPLID   = JC.EMPLID
+          AND JC_ES.EMPL_RCD = JC.EMPL_RCD
+          AND JC_ES.EFFDT    = JC.EFFDT
+      )
+  LLKey: 
+  LLShorthand: 
+  LLScript: 

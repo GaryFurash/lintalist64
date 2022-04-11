@@ -1,0 +1,66 @@
+﻿BundleFormat: 1
+Name: SQL Snippets
+Description: SQL Snippets
+Author: Gary Furash
+TitleMatch: 
+Patterns:
+- LLPart1: SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED;
+  LLPart2: SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED;
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: /***************************************************************************************************
+Object:             
+Description:        
+Called By:            
+Affected table(s):  
+Used By:            
+Parameter(s):       
+Usage:              
+****************************************************************************************************
+SUMMARY OF CHANGES
+Date    Author              Comments
+------------------- ------------------- ------------------------------------------------------------
+[[DateTime=MM/dd/yyyy]]  Gary Furash xx#xxxxx created
+***************************************************************************************************/
+DECLARE /* Local Variables */
+   ;
+
+BEGIN /* Create tables */
+END
+
+BEGIN /* Processing */
+
+END
+
+SELECT /* Do Stuff */
+FROM
+
+DECLARE /* Local Variables */
+   ;
+
+BEGIN /* Create tables */
+END
+
+BEGIN /* Processing */
+
+END
+
+SELECT /* Do Stuff */
+FROM
+  LLPart2: sql - header comment
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: -------------------------------------------------------------------------------
+--
+-------------------------------------------------------------------------------
+  LLPart2: sql - Block Comment
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: SELECT TOP 100 * FROM
+  LLPart2: SELECT TOP 100 * FROM
+  LLKey: 
+  LLShorthand: 
+  LLScript: 

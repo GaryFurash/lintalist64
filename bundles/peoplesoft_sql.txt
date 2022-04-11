@@ -1,0 +1,81 @@
+﻿BundleFormat: 1
+Name: PeopleSoft SQL
+Description: PeopleSoft SQL Snippets
+Author: Gary Furash
+TitleMatch: 
+Patterns:
+- LLPart1: COALESCE(( SELECT XL.FIELDVALUE + ': ' + XL.XLATLONGNAME FROM PSXLATITEM XL
+         WHERE XL.FIELDNAME  = '[[Input=FieldName]]'
+           AND XL.FIELDVALUE = [[Input=SourceAlias]].[[Input=FieldName]]
+           AND XL.EFFDT      = (
+                    SELECT MAX(XL_ED.EFFDT)
+                    FROM PSXLATITEM XL_ED
+                    WHERE XL_ED.FIELDNAME  = XL.FIELDNAME
+                      AND XL_ED.FIELDVALUE = XL.FIELDVALUE
+                      AND XL_ED.EFFDT      <= GETDATE()
+               ) ), 'None') AS [[Input=FieldName]]
+  LLPart2: peoplesoft sql - get translate value
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: SELECT *
+FROM PS_JOB JB 
+WHERE JB.EFFDT = (
+    SELECT MAX(JB_ED.EFFDT)
+    FROM PS_JOB JB_ED
+    WHERE JB_ED.EMPLID   = JB.EMPLID
+      AND JB_ED.EMPL_RCD = JB.EMPL_RCD
+      AND JB_ED.EFFDT   <= GETDATE()
+  )
+  AND JB.EFFSEQ = (
+    SELECT MAX(JB_ES.EFFSEQ)
+    FROM PS_JOB JB_ES
+    WHERE JB_ES.EMPLID   = JB.EMPLID
+      AND JB_ES.EMPL_RCD = JB.EMPL_RCD
+      AND JB_ES.EFFDT    = JB.EFFDT)
+  AND JB.HR_STATUS     = 'A'
+  AND JB.JOB_INDICATOR = 'P'
+  LLPart2: peoplesoft sql - get current effective dated job
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: SELECT *
+SELECT *
+FROM PS_PAY_CALENDAR CA
+  JOIN PS_PAY_PAGE PP
+    ON PP.COMPANY    = CA.COMPANY
+   AND PP.PAYGROUP   = CA.PAYGROUP
+   AND PP.PAY_END_DT = CA.PAY_END_DT
+  AND PP.PAY_OFF_CYCLE = CA.PAY_OFF_CYCLE
+  JOIN PS_PAY_LINE PL
+    ON PL.COMPANY    = PL.COMPANY
+   AND PL.PAYGROUP   = PL.PAYGROUP
+   AND PL.PAY_END_DT = PL.PAY_END_DT
+  AND PL.PAY_OFF_CYCLE = PL.PAY_OFF_CYCLE
+  AND PL.PAGE_NUM = PL.PAGE_NUM
+  JOIN PS_PAY_CHECK CK
+    ON CK.COMPANY	    = PL.COMPANY
+   AND CK.PAYGROUP	    = PL.PAYGROUP
+   AND CK.PAY_END_DT	= PL.PAY_END_DT
+   AND CK.OFF_CYCLE	    = PL.OFF_CYCLE
+   AND CK.PAGE_NUM	    = PL.PAGE_NUM
+   AND CK.LINE_NUM  	= PL.LINE_NUM
+  JOIN PS_PAY_EARNINGS ER
+    ON ER.COMPANY	    = CK.COMPANY
+   AND ER.PAYGROUP	    = CK.PAYGROUP
+   AND ER.PAY_END_DT	= CK.PAY_END_DT
+   AND ER.OFF_CYCLE	    = CK.OFF_CYCLE
+   AND ER.PAGE_NUM	    = CK.PAGE_NUM
+   AND ER.LINE_NUM  	= CK.LINE_NUM
+  LEFT JOIN PS_PAY_OTH_EARNS OE
+    ON OE.COMPANY	    = ER.COMPANY
+   AND OE.PAYGROUP	    = ER.PAYGROUP
+   AND OE.PAY_END_DT	= ER.PAY_END_DT
+   AND OE.OFF_CYCLE	    = ER.OFF_CYCLE
+   AND OE.PAGE_NUM	    = ER.PAGE_NUM
+   AND OE.LINE_NUM  	= ER.LINE_NUM
+   AND OE.ADDL_NBR  	= ER.ADDL_NBR
+  LLPart2: peoplesoft sql - get pay check
+  LLKey: 
+  LLShorthand: 
+  LLScript: 

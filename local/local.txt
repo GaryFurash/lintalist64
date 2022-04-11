@@ -1,0 +1,12 @@
+﻿BundleVersion: 1
+Name: Local bundle
+Description: Local and private variables for re-use in other Bundles
+Patterns:
+- LLVarName: HomeAddress
+  LLContent:
+- LLVarName: HomePhone
+  LLContent: 520-907-2470
+- LLVarName: WorkAddress
+  LLContent:
+- LLVarName: WorkPhone
+  LLContent:

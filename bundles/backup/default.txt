@@ -1,0 +1,22 @@
+﻿BundleFormat: 1
+Name: Default
+Description: Default bundle for Lintalist
+Author: Lintalist
+TitleMatch: 
+Patterns:
+- LLPart1: http://cpshrprdweb01.desertdiamondcasino.com:8000/psp/hrprd/?cmd=login&languageCd=ENG&
+  LLPart2: url - PeopleSoft HR 9.2 Production
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: Language:	
+Context:	
+Use Case:	
+
+< comments >
+
+< snippet >
+  LLPart2: onenote - snippet
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
