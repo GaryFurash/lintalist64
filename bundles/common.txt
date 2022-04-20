@@ -4,23 +4,38 @@ Description: Common replacements
 Author: Gary furash
 TitleMatch: 
 Patterns:
-- LLPart1: [[DateTime=yyyy-MM-dd]]
-  LLPart2: date - yyyy-MM-dd
-  LLKey: 
-  LLShorthand: 
-  LLScript: 
 - LLPart1: [[DateTime=yyyy-MM-dd HH:mm]] -
   LLPart2: date - journal
   LLKey: 
   LLShorthand: 
   LLScript: 
-- LLPart1: [[DateTime=MM/dd/yyyy]]
-  LLPart2: date - mm/dd/yyyy
+- LLPart1: [[DateTime=yyyy-MM-dd]]
+  LLPart2: date - yyyy-MM-dd
   LLKey: 
   LLShorthand: 
   LLScript: 
 - LLPart1: ➡
   LLPart2: character - arrow right
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: ☐
+  LLPart2: character - checkbox
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: ⏩
+  LLPart2: character - double right arrow
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: 520-907-2470
+  LLPart2: info - mobile phone
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: [[DateTime=MM/dd/yyyy]]
+  LLPart2: date - mm/dd/yyyy
   LLKey: 
   LLShorthand: 
   LLScript: 
@@ -39,18 +54,8 @@ Patterns:
   LLKey: 
   LLShorthand: 
   LLScript: 
-- LLPart1: 520-907-2470
-  LLPart2: info - mobile phone
-  LLKey: 
-  LLShorthand: 
-  LLScript: 
 - LLPart1: [[Selected=Upper]]
   LLPart2: selection - upper case
-  LLKey: 
-  LLShorthand: 
-  LLScript: 
-- LLPart1: ⏩
-  LLPart2: character - double right arrow
   LLKey: 
   LLShorthand: 
   LLScript: 
@@ -71,11 +76,6 @@ Patterns:
   LLScript: 
 - LLPart1: 📓
   LLPart2: character - journal
-  LLKey: 
-  LLShorthand: 
-  LLScript: 
-- LLPart1: ☐
-  LLPart2: character - checkbox
   LLKey: 
   LLShorthand: 
   LLScript: 

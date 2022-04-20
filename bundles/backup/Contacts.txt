@@ -4,16 +4,6 @@ Description: Contact Name Expansion
 Author: Gary Furash
 TitleMatch: 
 Patterns:
-- LLPart1: Joyce Laudenslager
-  LLPart2: contact - jla
-  LLKey: 
-  LLShorthand: 
-  LLScript: 
-- LLPart1: Diane Matsumoto
-  LLPart2: contact - dma
-  LLKey: 
-  LLShorthand: 
-  LLScript: 
 - LLPart1: Priscilla Siquieros
   LLPart2: contact - psi
   LLKey: 
@@ -21,6 +11,16 @@ Patterns:
   LLScript: 
 - LLPart1: Application Administrator
   LLPart2: contact - aad
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: Joyce Laudenslager
+  LLPart2: contact - jla
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: Diane Matsumoto
+  LLPart2: contact - dma
   LLKey: 
   LLShorthand: 
   LLScript: 
