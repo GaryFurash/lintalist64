@@ -4,6 +4,16 @@ Description: DDC Custom Snippets (not code)
 Author: Gary furash
 TitleMatch: 
 Patterns:
+- LLPart1: Please refresh database [[Choice=HRDEV92|HRTST92|HRSTG92|HRSUP92|FSDEV92|FSTST92|FSSTG92|FSSUP92]] on [[Choice=CPSDEVDB01|CPSSTGDB01]] from the [[Choice=NEW copy|latest standard backup]] of [[Choice=HRPRD92|FSPRD92]] on CPSPRDDB01. Before doing so please VERIFY that a valid recent backup exists of the environment being OVEWRITTEN. The application server (should) be shut down. Please contact me (Gary Furash) when complete.
+  LLPart2: text - refresh database
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: Gary Furash - IT PeopleSoft Developer - gffurash@ddcaz.com - 520-342-1641 (w), 520-907-2470 (m)
+  LLPart2: text - short work signature
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
 - LLPart1: [[Input=PROJECT]] Ready for Testing ([[DateTime=MM/dd/yyyy|14|Days]])
 
 Outcome: [[Input=OUTCOME]]
@@ -24,11 +34,6 @@ Additional Notes:
   LLKey: 
   LLShorthand: 
   LLScript: 
-- LLPart1: Please refresh database [[Choice=HRDEV92|HRTST92|HRSTG92|HRSUP92|FSDEV92|FSTST92|FSSTG92|FSSUP92]] on [[Choice=CPSDEVDB01|CPSSTGDB01]] from the [[Choice=NEW copy|latest standard backup]] of [[Choice=HRPRD92|FSPRD92]] on CPSPRDDB01. The application server (should) be shut down. Please contact me (Gary Furash) when complete.
-  LLPart2: text - refresh database
-  LLKey: 
-  LLShorthand: 
-  LLScript: 
 - LLPart1: https://cpsfsprdweb01.desertdiamondcasino.com:8050/psp/fsprd/EMPLOYEE/ERP/?cmd=logout
   LLPart2: url - peoplesoft fs 9.2 production
   LLKey: 
@@ -42,11 +47,6 @@ The above project has been moved to [[Input=Application]] Production. Please rev
 
 Comments:
   LLPart2: email - moved to production
-  LLKey: 
-  LLShorthand: 
-  LLScript: 
-- LLPart1: Gary Furash - IT PeopleSoft Developer - gffurash@ddcaz.com - 520-342-1641 (w), 520-907-2470 (m)
-  LLPart2: text - short work signature
   LLKey: 
   LLShorthand: 
   LLScript: 

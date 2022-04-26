@@ -4,13 +4,38 @@ Description: Common replacements
 Author: Gary furash
 TitleMatch: 
 Patterns:
-- LLPart1: [[DateTime=yyyy-MM-dd HH:mm]] -
-  LLPart2: date - journal
+- LLPart1: [[DateTime=MM/dd/yyyy]]
+  LLPart2: date - mm/dd/yyyy
   LLKey: 
   LLShorthand: 
   LLScript: 
 - LLPart1: [[DateTime=yyyy-MM-dd]]
   LLPart2: date - yyyy-MM-dd
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: [[DateTime=yyyy-MM-dd HH:mm]] -
+  LLPart2: date - journal
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: [[Selected=Upper]]
+  LLPart2: selection - upper case
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: gffurash@ddcaz.com
+  LLPart2: info - work email
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: 📎
+  LLPart2: character - clipped
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: furashgary@gmail.com
+  LLPart2: info - personal email
   LLKey: 
   LLShorthand: 
   LLScript: 
@@ -34,33 +59,8 @@ Patterns:
   LLKey: 
   LLShorthand: 
   LLScript: 
-- LLPart1: [[DateTime=MM/dd/yyyy]]
-  LLPart2: date - mm/dd/yyyy
-  LLKey: 
-  LLShorthand: 
-  LLScript: 
-- LLPart1: 📎
-  LLPart2: character - clipped
-  LLKey: 
-  LLShorthand: 
-  LLScript: 
 - LLPart1: ♻
   LLPart2: character - recurring task
-  LLKey: 
-  LLShorthand: 
-  LLScript: 
-- LLPart1: furashgary@gmail.com
-  LLPart2: info - personal email
-  LLKey: 
-  LLShorthand: 
-  LLScript: 
-- LLPart1: [[Selected=Upper]]
-  LLPart2: selection - upper case
-  LLKey: 
-  LLShorthand: 
-  LLScript: 
-- LLPart1: gffurash@ddcaz.com
-  LLPart2: info - work email
   LLKey: 
   LLShorthand: 
   LLScript: 

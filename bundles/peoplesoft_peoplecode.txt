@@ -4,15 +4,65 @@ Description: PeopleCode Snippets
 Author: Gary Furash
 TitleMatch: 
 Patterns:
-- LLPart1: /******************************************************************************
- *
+- LLPart1: import TTS_UNITTEST:TestBase;
+import [[Input=PackagePath]]:[[Input=ClassUnderTest]];
+
+class [[Input=ClassUnderTest]]Test extends TTS_UNITTEST:TestBase
+   method [[Input=ClassUnderTest]]Test();
+   method Run();
+   method SetUp();
+   method TearDown();
+private
+   method TestMethod1();
+   method Obverse(&InValue As boolean) Returns boolean;
+end-class;
+
+/*****************************************************************************
+ * Constructor
  *****************************************************************************/
-  LLPart2: peoplecode - java block comment
-  LLKey: 
-  LLShorthand: 
-  LLScript: 
-- LLPart1: WriteToLog(%ApplicationLogFence_Error, &Err.ToString());
-  LLPart2: peoplecode - writetolog
+
+method [[Input=ClassUnderTest]]Test
+   %Super = create TTS_UNITTEST:TestBase("[[Input=ClassUnderTest]]Test");
+end-method;
+
+/*****************************************************************************
+ * Framework Implementation
+ *****************************************************************************/
+method Run
+   /+ Extends/implements TTS_UNITTEST:TestBase.Run +/
+   %This.TestMethod1();
+end-method;
+
+method SetUp
+   /+ Extends/implements TTS_UNITTEST:TestBase.Setup +/
+end-method;
+
+method TearDown
+   /+ Extends/implements TTS_UNITTEST:TestBase.Teardown +/
+end-method;
+
+/*****************************************************************************
+ * Tests
+ *****************************************************************************/
+
+method TestMethod1
+   /* Arrange, Act, Assert */
+end-method;
+
+/*****************************************************************************
+ * Utility Methods
+ *****************************************************************************/
+
+method Obverse
+   /+ &InValue as Boolean +/
+   /+ Returns Boolean +/
+   If &InValue = True Then
+      Return False;
+   Else
+      Return True;
+   End-If;
+end-method;
+  LLPart2: peoplecode - unit test template
   LLKey: 
   LLShorthand: 
   LLScript: 
@@ -24,11 +74,6 @@ Patterns:
  * @exception none
  */
   LLPart2: peoplecode - method comment
-  LLKey: 
-  LLShorthand: 
-  LLScript: 
-- LLPart1: [[DateTime=MM/dd/yyyy]] gffurash [[INPUT=Request ID]] - [[INPUT=Comment]]
-  LLPart2: peoplecode - history comment
   LLKey: 
   LLShorthand: 
   LLScript: 
@@ -78,67 +123,20 @@ end-method;
   LLKey: 
   LLShorthand: 
   LLScript: 
-- LLPart1: import TTS_UNITTEST:TestBase;
-import [[Input=ClassUnderTest]];
-
-[[Input=ClassUnderTest]]
-
-class [[Input=ClassUnderTest]]Test extends TTS_UNITTEST:TestBase
-   method [[Input=ClassUnderTest]]Test();
-   method Run();
-   method SetUp();
-   method TearDown();
-private
-   method TestMethod1();
-   method Obverse(&InValue As boolean) Returns boolean;
-end-class;
-
-/*****************************************************************************
- * Constructor
+- LLPart1: [[DateTime=MM/dd/yyyy]] gffurash [[INPUT=Request ID]] - [[INPUT=Comment]]
+  LLPart2: peoplecode - history comment
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: /******************************************************************************
+ *
  *****************************************************************************/
-
-method [[Input=ClassUnderTest]]Test
-   %Super = create TTS_UNITTEST:TestBase("BalanceIDTemplateTest");
-end-method;
-
-/*****************************************************************************
- * Framework Implementation
- *****************************************************************************/
-method Run
-   /+ Extends/implements TTS_UNITTEST:TestBase.Run +/
-   %This.TestMethod1();
-end-method;
-
-method SetUp
-   /+ Extends/implements TTS_UNITTEST:TestBase.Setup +/
-end-method;
-
-method TearDown
-   /+ Extends/implements TTS_UNITTEST:TestBase.Teardown +/
-end-method;
-
-/*****************************************************************************
- * Tests
- *****************************************************************************/
-
-method TestMethod1
-   /* Arrange, Act, Assert */
-end-method;
-
-/*****************************************************************************
- * Utility Methods
- *****************************************************************************/
-
-method Obverse
-   /+ &InValue as Boolean +/
-   /+ Returns Boolean +/
-   If &InValue = True Then
-      Return False;
-   Else
-      Return True;
-   End-If;
-end-method;
-  LLPart2: peoplecode - unit test template
+  LLPart2: peoplecode - java block comment
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: WriteToLog(%ApplicationLogFence_Error, &Err.ToString());
+  LLPart2: peoplecode - writetolog
   LLKey: 
   LLShorthand: 
   LLScript: 
