@@ -9,6 +9,21 @@ Patterns:
   LLKey: 
   LLShorthand: 
   LLScript: 
+- LLPart1: 520-342-1641
+  LLPart2: info - work phone
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: https://cpsfsdevweb01.desertdiamondcasino.com:8083/psp/fstst/EMPLOYEE/ERP/?cmd=logout
+  LLPart2: url - PeopleSoft FS 9.2 Test
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: https://cpsfsstgweb01.desertdiamondcasino.com:8073/psp/fssup/?cmd=logout
+  LLPart2: url - PeopleSoft FS 9.2 Support
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
 - LLPart1: Gary Furash - IT PeopleSoft Developer - gffurash@ddcaz.com - 520-342-1641 (w), 520-907-2470 (m)
   LLPart2: text - short work signature
   LLKey: 
@@ -26,11 +41,6 @@ If you have any questions, comments or concerns, please feel free to contact me 
 
 Additional Notes:
   LLPart2: email - ready for user testing
-  LLKey: 
-  LLShorthand: 
-  LLScript: 
-- LLPart1: https://cpsfsstgweb01.desertdiamondcasino.com:8073/psp/fssup/?cmd=logout
-  LLPart2: url - PeopleSoft FS 9.2 Support
   LLKey: 
   LLShorthand: 
   LLScript: 
@@ -83,11 +93,6 @@ If you get the error “Duplicate instances of node name …” click OK and ski
   LLKey: 
   LLShorthand: 
   LLScript: 
-- LLPart1: http://ddcpsupg1.desertdiamondcasino.com:8040/psp/FSSUP91/?cmd=login&languageCd=ENG&
-  LLPart2: url - PeopleSoft FS 9.1 Support
-  LLKey: 
-  LLShorthand: 
-  LLScript: 
 - LLPart1: 1.	Navigate to https://cpsfsprdweb01.desertdiamondcasino.com:8050/psp/fsprd/EMPLOYEE/ERP/?cmd=logout in microsoft edge
 2.	Click on the Padlock symbol to the left of https:// in the browser bar
 3.	Click on the row that says Cookies >
@@ -99,11 +104,6 @@ If you get the error “Duplicate instances of node name …” click OK and ski
   LLScript: 
 - LLPart1: 8520342
   LLPart2: text - ddc phone prefix
-  LLKey: 
-  LLShorthand: 
-  LLScript: 
-- LLPart1: http://ddcpsfs1.desertdiamondcasino.com:8000/psp/fsprd91/?cmd=login
-  LLPart2: url - PeopleSoft FS 9.1 Production
   LLKey: 
   LLShorthand: 
   LLScript: 
@@ -119,11 +119,6 @@ If you get the error “Duplicate instances of node name …” click OK and ski
   LLScript: 
 - LLPart1: Application Administrators
   LLPart2: person - aa
-  LLKey: 
-  LLShorthand: 
-  LLScript: 
-- LLPart1: http://ddcpsdevfs1.desertdiamondcasino.com:8050/psp/fstst91/EMPLOYEE/ERP/?cmd=logout
-  LLPart2: url - PeopleSoft FS 9.1 Test
   LLKey: 
   LLShorthand: 
   LLScript: 
@@ -152,11 +147,6 @@ Please let me know if you have any questions.
   LLKey: 
   LLShorthand: 
   LLScript: 
-- LLPart1: http://ddcpsdevfs1.desertdiamondcasino.com:8030/psp/fsdev91/?cmd=login&errorCode=105&languageCd=ENG
-  LLPart2: url - PeopleSoft FS 9.1 Development
-  LLKey: 
-  LLShorthand: 
-  LLScript: 
 - LLPart1: http://cpshrdevweb01.desertdiamondcasino.com:18060/psp/hrtst/EMPLOYEE/HRMS/?cmd=logout
   LLPart2: url - PeopleSoft HR 9.2 Test
   LLKey: 
@@ -164,11 +154,6 @@ Please let me know if you have any questions.
   LLScript: 
 - LLPart1: http://ddcphire01.desertdiamondcasino.com:8000/psp/phireprd/?cmd=login&languageCd=ENG
   LLPart2: url - Phire Server
-  LLKey: 
-  LLShorthand: 
-  LLScript: 
-- LLPart1: https://cpsfsdevweb01.desertdiamondcasino.com:8083/psp/fstst/EMPLOYEE/ERP/?cmd=logout
-  LLPart2: url - PeopleSoft FS 9.2 Test
   LLKey: 
   LLShorthand: 
   LLScript: 
@@ -189,11 +174,6 @@ If she uses INTERNET EXPLORER
 6. Delete button
 7. Close IE. Close OUTLOOK
   LLPart2: email - clear cache instructions
-  LLKey: 
-  LLShorthand: 
-  LLScript: 
-- LLPart1: 520-342-1641
-  LLPart2: info - work phone
   LLKey: 
   LLShorthand: 
   LLScript: 

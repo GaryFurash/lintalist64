@@ -4,6 +4,73 @@ Description: PeopleCode Snippets
 Author: Gary Furash
 TitleMatch: 
 Patterns:
+- LLPart1: [[DateTime=MM/dd/yyyy]] gffurash [[INPUT=Request ID]] - [[INPUT=Comment]]
+  LLPart2: peoplecode - history comment
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: /**
+ * << description >>
+ * 
+ * @param
+ * @return
+ * @exception none
+ */
+  LLPart2: peoplecode - method comment
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: REM import DDC_UTILITY:EXCEPTION:IllegalArgumentException;
+
+/**
+ * 
+ *
+ * Usage:
+ *
+ * Modification History
+ * --------------------
+ * [[DateTime=MM/dd/yyyy]] gffurash [[INPUT=Request ID]] - created
+ */
+class [[Input=classname]]
+   method [[Input=classname]](); /* Constructor */
+end-class;
+
+/*****************************************************************************
+ * DECLARATIONS (GLOBAL/COMPONENT VARIABLES, FUNCTIONS)
+ *****************************************************************************/
+
+/*****************************************************************************
+ * CONSTRUCTOR
+ *****************************************************************************/
+
+/**
+ * @param
+ * @exception
+ */
+method [[Input=classname]]
+
+end-method;
+
+/*****************************************************************************
+ * METHODS
+ *****************************************************************************/
+
+/*****************************************************************************
+ * PROPERTIES (GET)
+ *****************************************************************************/
+
+/*****************************************************************************
+ * PROPERTIES (SET)
+ *****************************************************************************/
+  LLPart2: peoplecode - class template
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: WriteToLog(%ApplicationLogFence_Error, &Err.ToString());
+  LLPart2: peoplecode - writetolog
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
 - LLPart1: import TTS_UNITTEST:TestBase;
 import [[Input=PackagePath]]:[[Input=ClassUnderTest]];
 
@@ -66,77 +133,10 @@ end-method;
   LLKey: 
   LLShorthand: 
   LLScript: 
-- LLPart1: /**
- * << description >>
- * 
- * @param
- * @return
- * @exception none
- */
-  LLPart2: peoplecode - method comment
-  LLKey: 
-  LLShorthand: 
-  LLScript: 
-- LLPart1: REM import DDC_UTILITY:EXCEPTION:IllegalArgumentException;
-
-/**
- * 
- *
- * Usage:
- *
- * Modification History
- * --------------------
- * [[DateTime=MM/dd/yyyy]] gffurash [[INPUT=Request ID]] - created
- */
-class [[Input=classname]]
-   method [[Input=classname]](); /* Constructor */
-end-class;
-
-/*****************************************************************************
- * DECLARATIONS (GLOBAL/COMPONENT VARIABLES, FUNCTIONS)
- *****************************************************************************/
-
-/*****************************************************************************
- * CONSTRUCTOR
- *****************************************************************************/
-
-/**
- * @param
- * @exception
- */
-method [[Input=classname]]
-
-end-method;
-
-/*****************************************************************************
- * METHODS
- *****************************************************************************/
-
-/*****************************************************************************
- * PROPERTIES (GET)
- *****************************************************************************/
-
-/*****************************************************************************
- * PROPERTIES (SET)
- *****************************************************************************/
-  LLPart2: peoplecode - class template
-  LLKey: 
-  LLShorthand: 
-  LLScript: 
-- LLPart1: [[DateTime=MM/dd/yyyy]] gffurash [[INPUT=Request ID]] - [[INPUT=Comment]]
-  LLPart2: peoplecode - history comment
-  LLKey: 
-  LLShorthand: 
-  LLScript: 
 - LLPart1: /******************************************************************************
  *
  *****************************************************************************/
   LLPart2: peoplecode - java block comment
-  LLKey: 
-  LLShorthand: 
-  LLScript: 
-- LLPart1: WriteToLog(%ApplicationLogFence_Error, &Err.ToString());
-  LLPart2: peoplecode - writetolog
   LLKey: 
   LLShorthand: 
   LLScript: 
