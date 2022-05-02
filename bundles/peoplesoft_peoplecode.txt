@@ -4,11 +4,6 @@ Description: PeopleCode Snippets
 Author: Gary Furash
 TitleMatch: 
 Patterns:
-- LLPart1: [[DateTime=MM/dd/yyyy]] gffurash [[INPUT=Request ID]] - [[INPUT=Comment]]
-  LLPart2: peoplecode - history comment
-  LLKey: 
-  LLShorthand: 
-  LLScript: 
 - LLPart1: /**
  * << description >>
  * 
@@ -71,6 +66,26 @@ end-method;
   LLKey: 
   LLShorthand: 
   LLScript: 
+- LLPart1: import PT_RCF:ServiceInterface;
+
+class ChangeClassNameToEventName extends PT_RCF:ServiceInterface
+   method execute();
+end-class;
+
+method execute
+   /+ Extends/implements PT_RCF:ServiceInterface.execute +/
+   
+   REM ** Code goes here;
+end-method;
+  LLPart2: peoplecode - event mapping for component
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: [[DateTime=MM/dd/yyyy]] gffurash [[INPUT=Request ID]] - [[INPUT=Comment]]
+  LLPart2: peoplecode - history comment
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
 - LLPart1: import TTS_UNITTEST:TestBase;
 import [[Input=PackagePath]]:[[Input=ClassUnderTest]];
 
@@ -112,6 +127,7 @@ end-method;
  * Tests
  *****************************************************************************/
 
+/*---------------------------------------------------------------------------*/
 method TestMethod1
    /* Arrange, Act, Assert */
 end-method;
@@ -160,21 +176,6 @@ method OnRequest
    Return &response;
 end-method;
   LLPart2: peoplecode - integration broker request handler
-  LLKey: 
-  LLShorthand: 
-  LLScript: 
-- LLPart1: import PT_RCF:ServiceInterface;
-
-class ChangeClassNameToEventName extends PT_RCF:ServiceInterface
-   method execute();
-end-class;
-
-method execute
-   /+ Extends/implements PT_RCF:ServiceInterface.execute +/
-   
-   REM ** Code goes here;
-end-method;
-  LLPart2: peoplecode - event mapping for component
   LLKey: 
   LLShorthand: 
   LLScript: 

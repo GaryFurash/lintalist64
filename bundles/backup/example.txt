@@ -4,16 +4,16 @@ Description: Example bundles
 Author: Default
 TitleMatch: 
 Patterns:
-- LLPart1: By the way
-  LLPart2: Example of a shorthand replacement, type btw followed by a space or tab
-  LLKey: 
-  LLShorthand: btw
-  LLScript: 
 - LLPart1: This will show a MsgBox, as it runs the script "MsgBox Hello"
   LLPart2: Really it will
   LLKey: 
   LLShorthand: 
   LLScript: MsgBox Hello
+- LLPart1: By the way
+  LLPart2: Example of a shorthand replacement, type btw followed by a space or tab
+  LLKey: 
+  LLShorthand: btw
+  LLScript: 
 - LLPart1: [[md]]
 # Heading 1
 

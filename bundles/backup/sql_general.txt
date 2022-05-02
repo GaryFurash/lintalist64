@@ -4,13 +4,13 @@ Description: General SQL Snippets
 Author: Gary Furash
 TitleMatch: 
 Patterns:
-- LLPart1: if object_id('tempdb..#[[Input=name]]') is not null drop table #[[Input=name]]
-  LLPart2: sql - drop temporary table
+- LLPart1: SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED;
+  LLPart2: SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED;
   LLKey: 
   LLShorthand: 
   LLScript: 
-- LLPart1: SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED;
-  LLPart2: SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED;
+- LLPart1: if object_id('tempdb..#[[Input=name]]') is not null drop table #[[Input=name]]
+  LLPart2: sql - drop temporary table
   LLKey: 
   LLShorthand: 
   LLScript: 

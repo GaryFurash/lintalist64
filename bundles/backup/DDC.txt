@@ -9,13 +9,8 @@ Patterns:
   LLKey: 
   LLShorthand: 
   LLScript: 
-- LLPart1: https://cpsfsdevweb01.desertdiamondcasino.com:8083/psp/fstst/EMPLOYEE/ERP/?cmd=logout
-  LLPart2: url - PeopleSoft FS 9.2 Test
-  LLKey: 
-  LLShorthand: 
-  LLScript: 
-- LLPart1: https://cpsfsstgweb01.desertdiamondcasino.com:8073/psp/fssup/?cmd=logout
-  LLPart2: url - PeopleSoft FS 9.2 Support
+- LLPart1: https://cpsfsprdweb01.desertdiamondcasino.com:8050/psp/fsprd/EMPLOYEE/ERP/?cmd=logout
+  LLPart2: url - peoplesoft fs 9.2 production
   LLKey: 
   LLShorthand: 
   LLScript: 
@@ -24,8 +19,19 @@ Patterns:
   LLKey: 
   LLShorthand: 
   LLScript: 
-- LLPart1: Gary Furash - IT PeopleSoft Developer - gffurash@ddcaz.com - 520-342-1641 (w), 520-907-2470 (m)
-  LLPart2: text - short work signature
+- LLPart1: {[[Input=Project]]} Moved to Production, Review Requested
+
+Outcome: [[Input=Outcome]] 
+
+The above project has been moved to [[Input=Application]] Production. Please review and verify that it is working as expected and contact me with confirmation of that fact OR any problems you encountered.
+
+Comments:
+  LLPart2: email - moved to production
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: https://cpsfsstgweb01.desertdiamondcasino.com:8053/psp/fsstg/EMPLOYEE/ERP/?cmd=logout
+  LLPart2: url - PeopleSoft FS 9.2 Staging
   LLKey: 
   LLShorthand: 
   LLScript: 
@@ -44,19 +50,18 @@ Additional Notes:
   LLKey: 
   LLShorthand: 
   LLScript: 
-- LLPart1: https://cpsfsprdweb01.desertdiamondcasino.com:8050/psp/fsprd/EMPLOYEE/ERP/?cmd=logout
-  LLPart2: url - peoplesoft fs 9.2 production
+- LLPart1: https://cpsfsdevweb01.desertdiamondcasino.com:8083/psp/fstst/EMPLOYEE/ERP/?cmd=logout
+  LLPart2: url - PeopleSoft FS 9.2 Test
   LLKey: 
   LLShorthand: 
   LLScript: 
-- LLPart1: {[[Input=Project]]} Moved to Production, Review Requested
-
-Outcome: [[Input=Outcome]] 
-
-The above project has been moved to [[Input=Application]] Production. Please review and verify that it is working as expected and contact me with confirmation of that fact OR any problems you encountered.
-
-Comments:
-  LLPart2: email - moved to production
+- LLPart1: https://cpsfsstgweb01.desertdiamondcasino.com:8073/psp/fssup/?cmd=logout
+  LLPart2: url - PeopleSoft FS 9.2 Support
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: Gary Furash - IT PeopleSoft Developer - gffurash@ddcaz.com - 520-342-1641 (w), 520-907-2470 (m)
+  LLPart2: text - short work signature
   LLKey: 
   LLShorthand: 
   LLScript: 
@@ -67,11 +72,6 @@ Comments:
   LLScript: 
 - LLPart1: http://cpshrstgweb01.desertdiamondcasino.com:9070/psp/hrsup/EMPLOYEE/HRMS/?cmd=logout
   LLPart2: url - PeopleSoft HR 9.2 Support
-  LLKey: 
-  LLShorthand: 
-  LLScript: 
-- LLPart1: https://cpsfsstgweb01.desertdiamondcasino.com:8053/psp/fsstg/EMPLOYEE/ERP/?cmd=logout
-  LLPart2: url - PeopleSoft FS 9.2 Staging
   LLKey: 
   LLShorthand: 
   LLScript: 
