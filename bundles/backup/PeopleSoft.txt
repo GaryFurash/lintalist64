@@ -1,0 +1,17 @@
+﻿BundleFormat: 1
+Name: PeopleSoft
+Description: PeopleSoft
+Author: Gary Furash
+TitleMatch: 
+Patterns:
+- LLPart1: PeopleSoft
+  LLPart2:
+  LLKey:
+  LLShorthand:
+  LLScript:
+
+- LLPart1: -TRACE 7 -TOOLSTRACE 143 -TOOLSTRACEPC 4044 -TOOLSTRACESQL 31
+  LLPart2: peoplesoft - trace application engine process
+  LLKey: 
+  LLShorthand: 
+  LLScript:

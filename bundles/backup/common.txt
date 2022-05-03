@@ -19,6 +19,11 @@ Patterns:
   LLKey: 
   LLShorthand: 
   LLScript: 
+- LLPart1: gffurash@ddcaz.com
+  LLPart2: info - work email
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
 - LLPart1: furashgary@gmail.com
   LLPart2: info - personal email
   LLKey: 
@@ -31,11 +36,6 @@ Patterns:
   LLScript: 
 - LLPart1: [[Selected=Upper]]
   LLPart2: selection - upper case
-  LLKey: 
-  LLShorthand: 
-  LLScript: 
-- LLPart1: gffurash@ddcaz.com
-  LLPart2: info - work email
   LLKey: 
   LLShorthand: 
   LLScript: 
