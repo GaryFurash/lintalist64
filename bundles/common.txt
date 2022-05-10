@@ -9,6 +9,11 @@ Patterns:
   LLKey: 
   LLShorthand: 
   LLScript: 
+- LLPart1: /* TODO: Remove */
+  LLPart2: TODO Comment: Remove
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
 - LLPart1: [[DateTime=yyyy-MM-dd]]
   LLPart2: date - yyyy-MM-dd
   LLKey: 
@@ -151,11 +156,6 @@ Patterns:
   LLScript: 
 - LLPart1: add.task.721461.109415452.6679404b7a6a1411@todoist.net
   LLPart2: info - todoist email
-  LLKey: 
-  LLShorthand: 
-  LLScript: 
-- LLPart1: /* TODO: Remove */
-  LLPart2: TODO Comment: Remove
   LLKey: 
   LLShorthand: 
   LLScript: 

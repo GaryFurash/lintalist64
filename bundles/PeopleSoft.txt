@@ -2,13 +2,27 @@
 Name: PeopleSoft
 Description: PeopleSoft
 Author: Gary Furash
-TitleMatch:
+TitleMatch: 
 Patterns:
-- LLPart1: -TRACE 7 -TOOLSTRACE 143 -TOOLSTRACEPC 4044 -TOOLSTRACESQL 31
-  LLPart2: peoplesoft - trace application engine process
-  LLKey:
-  LLShorthand:
-  LLScript:
+- LLPart1: COALESCE(( SELECT XL.FIELDVALUE + ': ' + XL.XLATLONGNAME FROM PSXLATITEM XL
+         WHERE XL.FIELDNAME  = '[[Input=FieldName]]'
+           AND XL.FIELDVALUE = [[Input=SourceAlias]].[[Input=FieldName]]
+           AND XL.EFFDT      = (
+                    SELECT MAX(XL_ED.EFFDT)
+                    FROM PSXLATITEM XL_ED
+                    WHERE XL_ED.FIELDNAME  = XL.FIELDNAME
+                      AND XL_ED.FIELDVALUE = XL.FIELDVALUE
+                      AND XL_ED.EFFDT      <= GETDATE()
+               ) ), 'None') AS [[Input=FieldName]]
+  LLPart2: peoplesoft sql - get translate value
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: WriteToLog(%ApplicationLogFence_Error, &Err.ToString());
+  LLPart2: peoplecode - writetolog
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
 - LLPart1: /**
  * << description >>
  *
@@ -17,10 +31,11 @@ Patterns:
  * @exception none
  */
   LLPart2: peoplecode - method comment
-  LLKey:
-  LLShorthand:
-  LLScript:
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
 - LLPart1: REM import DDC_UTILITY:EXCEPTION:IllegalArgumentException;
+REM import DDC_UTILITY:EXCEPTION:NotImplementedException;
 
 /**
  *
@@ -58,6 +73,27 @@ end-method;
  * METHODS
  *****************************************************************************/
 
+/**
+ * Is this object equal to the passed object
+ *
+ * @param &compareTo_ object to compare 
+ * @return True if equals
+ * @exception none
+ */
+method Equals
+   return false;
+end-method;
+
+/**
+ * Return a string value (identifier) for this object
+ *
+ * @return string representation
+ * @exception none
+ */
+method ToString
+   Return "";
+end-method;
+
 /*****************************************************************************
  * PROPERTIES (GET)
  *****************************************************************************/
@@ -66,34 +102,16 @@ end-method;
  * PROPERTIES (SET)
  *****************************************************************************/
   LLPart2: peoplecode - class template
-  LLKey:
-  LLShorthand:
-  LLScript:
-- LLPart1: WriteToLog(%ApplicationLogFence_Error, &Err.ToString());
-  LLPart2: peoplecode - writetolog
-  LLKey:
-  LLShorthand:
-  LLScript:
-- LLPart1: import PT_RCF:ServiceInterface;
-
-class ChangeClassNameToEventName extends PT_RCF:ServiceInterface
-   method execute();
-end-class;
-
-method execute
-   /+ Extends/implements PT_RCF:ServiceInterface.execute +/
-
-   REM ** Code goes here;
-end-method;
-  LLPart2: peoplecode - event mapping for component
-  LLKey:
-  LLShorthand:
-  LLScript:
-- LLPart1: [[DateTime=MM/dd/yyyy]] gffurash [[INPUT=Request ID]] - [[INPUT=Comment]]
-  LLPart2: peoplecode - history comment
-  LLKey:
-  LLShorthand:
-  LLScript:
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: /******************************************************************************
+ *
+ *****************************************************************************/
+  LLPart2: peoplecode - java block comment
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
 - LLPart1: import TTS_UNITTEST:TestBase;
 import [[Input=PackagePath]]:[[Input=ClassUnderTest]];
 
@@ -154,16 +172,34 @@ method Obverse
    End-If;
 end-method;
   LLPart2: peoplecode - unit test template
-  LLKey:
-  LLShorthand:
-  LLScript:
-- LLPart1: /******************************************************************************
- *
- *****************************************************************************/
-  LLPart2: peoplecode - java block comment
-  LLKey:
-  LLShorthand:
-  LLScript:
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: -TRACE 7 -TOOLSTRACE 143 -TOOLSTRACEPC 4044 -TOOLSTRACESQL 31
+  LLPart2: peoplesoft - trace application engine process
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: import PT_RCF:ServiceInterface;
+
+class ChangeClassNameToEventName extends PT_RCF:ServiceInterface
+   method execute();
+end-class;
+
+method execute
+   /+ Extends/implements PT_RCF:ServiceInterface.execute +/
+
+   REM ** Code goes here;
+end-method;
+  LLPart2: peoplecode - event mapping for component
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: [[DateTime=MM/dd/yyyy]] gffurash [[INPUT=Request ID]] - [[INPUT=Comment]]
+  LLPart2: peoplecode - history comment
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
 - LLPart1: import PS_PT:Integration:IRequestHandler;
 
 class GetEmployeesHandler implements PS_PT:Integration:IRequestHandler
@@ -184,9 +220,9 @@ method OnRequest
    Return &response;
 end-method;
   LLPart2: peoplecode - integration broker request handler
-  LLKey:
-  LLShorthand:
-  LLScript:
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
 - LLPart1: class [[Input=exception]]Exception extends Exception
    method CUDActionFailureException(&message as string);
 end-class;
@@ -195,23 +231,9 @@ method [[Input=exception]]Exception
    %Super = CreateException(10000, 1, "message not found", &message);
 end-method;
   LLPart2: peoplecode - exception class
-  LLKey:
-  LLShorthand:
-  LLScript:
-- LLPart1: COALESCE(( SELECT XL.FIELDVALUE + ': ' + XL.XLATLONGNAME FROM PSXLATITEM XL
-         WHERE XL.FIELDNAME  = '[[Input=FieldName]]'
-           AND XL.FIELDVALUE = [[Input=SourceAlias]].[[Input=FieldName]]
-           AND XL.EFFDT      = (
-                    SELECT MAX(XL_ED.EFFDT)
-                    FROM PSXLATITEM XL_ED
-                    WHERE XL_ED.FIELDNAME  = XL.FIELDNAME
-                      AND XL_ED.FIELDVALUE = XL.FIELDVALUE
-                      AND XL_ED.EFFDT      <= GETDATE()
-               ) ), 'None') AS [[Input=FieldName]]
-  LLPart2: peoplesoft sql - get translate value
-  LLKey:
-  LLShorthand:
-  LLScript:
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
 - LLPart1: SELECT *
 FROM PS_JOB JB
 WHERE JB.EFFDT = (
@@ -230,9 +252,9 @@ WHERE JB.EFFDT = (
   AND JB.HR_STATUS     = 'A'
   AND JB.JOB_INDICATOR = 'P'
   LLPart2: peoplesoft sql - get current effective dated job
-  LLKey:
-  LLShorthand:
-  LLScript:
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
 - LLPart1: SELECT *
 SELECT *
 FROM PS_PAY_CALENDAR CA
@@ -270,6 +292,6 @@ FROM PS_PAY_CALENDAR CA
    AND OE.LINE_NUM  	= ER.LINE_NUM
    AND OE.ADDL_NBR  	= ER.ADDL_NBR
   LLPart2: peoplesoft sql - get pay check
-  LLKey:
-  LLShorthand:
-  LLScript:
+  LLKey: 
+  LLShorthand: 
+  LLScript: 

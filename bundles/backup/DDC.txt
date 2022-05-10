@@ -4,13 +4,33 @@ Description: DDC Custom Snippets (not code)
 Author: Gary furash
 TitleMatch: 
 Patterns:
-- LLPart1: 520-342-1641
-  LLPart2: info - work phone
+- LLPart1: https://cpsfsstgweb01.desertdiamondcasino.com:8073/psp/fssup/?cmd=logout
+  LLPart2: url - PeopleSoft FS 9.2 Support
   LLKey: 
   LLShorthand: 
   LLScript: 
 - LLPart1: https://cpsfsprdweb01.desertdiamondcasino.com:8050/psp/fsprd/EMPLOYEE/ERP/?cmd=logout
   LLPart2: url - peoplesoft fs 9.2 production
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: https://cpsfsstgweb01.desertdiamondcasino.com:8053/psp/fsstg/EMPLOYEE/ERP/?cmd=logout
+  LLPart2: url - PeopleSoft FS 9.2 Staging
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: Gary Furash - IT PeopleSoft Developer - gffurash@ddcaz.com - 520-342-1641 (w), 520-907-2470 (m)
+  LLPart2: text - short work signature
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: Application Administrators
+  LLPart2: person - aa
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: 520-342-1641
+  LLPart2: info - work phone
   LLKey: 
   LLShorthand: 
   LLScript: 
@@ -27,11 +47,6 @@ The above project has been moved to [[Input=Application]] Production. Please rev
 
 Comments:
   LLPart2: email - moved to production
-  LLKey: 
-  LLShorthand: 
-  LLScript: 
-- LLPart1: https://cpsfsstgweb01.desertdiamondcasino.com:8053/psp/fsstg/EMPLOYEE/ERP/?cmd=logout
-  LLPart2: url - PeopleSoft FS 9.2 Staging
   LLKey: 
   LLShorthand: 
   LLScript: 
@@ -52,16 +67,6 @@ Additional Notes:
   LLScript: 
 - LLPart1: https://cpsfsdevweb01.desertdiamondcasino.com:8083/psp/fstst/EMPLOYEE/ERP/?cmd=logout
   LLPart2: url - PeopleSoft FS 9.2 Test
-  LLKey: 
-  LLShorthand: 
-  LLScript: 
-- LLPart1: https://cpsfsstgweb01.desertdiamondcasino.com:8073/psp/fssup/?cmd=logout
-  LLPart2: url - PeopleSoft FS 9.2 Support
-  LLKey: 
-  LLShorthand: 
-  LLScript: 
-- LLPart1: Gary Furash - IT PeopleSoft Developer - gffurash@ddcaz.com - 520-342-1641 (w), 520-907-2470 (m)
-  LLPart2: text - short work signature
   LLKey: 
   LLShorthand: 
   LLScript: 
@@ -114,11 +119,6 @@ If you get the error “Duplicate instances of node name …” click OK and ski
   LLScript: 
 - LLPart1: ☺
   LLPart2: peoplesoft - tips entry special symbol
-  LLKey: 
-  LLShorthand: 
-  LLScript: 
-- LLPart1: Application Administrators
-  LLPart2: person - aa
   LLKey: 
   LLShorthand: 
   LLScript: 
