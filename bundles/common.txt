@@ -9,11 +9,6 @@ Patterns:
   LLKey: 
   LLShorthand: 
   LLScript: 
-- LLPart1: /* TODO: Remove */
-  LLPart2: TODO Comment: Remove
-  LLKey: 
-  LLShorthand: 
-  LLScript: 
 - LLPart1: [[DateTime=yyyy-MM-dd]]
   LLPart2: date - yyyy-MM-dd
   LLKey: 
@@ -21,6 +16,11 @@ Patterns:
   LLScript: 
 - LLPart1: [[DateTime=MM/dd/yyyy]]
   LLPart2: date - mm/dd/yyyy
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: /* TODO: Remove */
+  LLPart2: TODO Comment: Remove
   LLKey: 
   LLShorthand: 
   LLScript: 

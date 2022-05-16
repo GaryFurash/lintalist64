@@ -4,8 +4,8 @@ Description: Common replacements
 Author: Gary furash
 TitleMatch: 
 Patterns:
-- LLPart1: /* TODO: Remove */
-  LLPart2: TODO Comment: Remove
+- LLPart1: [[DateTime=MM/dd/yyyy]]
+  LLPart2: date - mm/dd/yyyy
   LLKey: 
   LLShorthand: 
   LLScript: 
@@ -19,8 +19,8 @@ Patterns:
   LLKey: 
   LLShorthand: 
   LLScript: 
-- LLPart1: [[DateTime=MM/dd/yyyy]]
-  LLPart2: date - mm/dd/yyyy
+- LLPart1: /* TODO: Remove */
+  LLPart2: TODO Comment: Remove
   LLKey: 
   LLShorthand: 
   LLScript: 

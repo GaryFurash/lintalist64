@@ -4,13 +4,13 @@ Description: Contact Name Expansion
 Author: Gary Furash
 TitleMatch: 
 Patterns:
-- LLPart1: Joyce Laudenslager
-  LLPart2: contact - jla
+- LLPart1: Application Administrator
+  LLPart2: contact - aad
   LLKey: 
   LLShorthand: 
   LLScript: 
-- LLPart1: Application Administrator
-  LLPart2: contact - aad
+- LLPart1: Joyce Laudenslager
+  LLPart2: contact - jla
   LLKey: 
   LLShorthand: 
   LLScript: 
