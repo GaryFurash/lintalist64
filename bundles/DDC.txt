@@ -4,6 +4,11 @@ Description: DDC Custom Snippets (not code)
 Author: Gary furash
 TitleMatch: 
 Patterns:
+- LLPart1: [[Input=ServerName]].desertdiamondcasino.com
+  LLPart2: fully qualified server name
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
 - LLPart1: https://cpsfsstgweb01.desertdiamondcasino.com:8073/psp/fssup/?cmd=logout
   LLPart2: url - PeopleSoft FS 9.2 Support
   LLKey: 
@@ -182,9 +187,3 @@ If she uses INTERNET EXPLORER
   LLKey: 
   LLShorthand: 
   LLScript: 
-
-- LLPart1: [[Input=ServerName]].desertdiamondcasino.com
-  LLPart2: fully qualified server name
-  LLKey: 
-  LLShorthand: 
-  LLScript:
