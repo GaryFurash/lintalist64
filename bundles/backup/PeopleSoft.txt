@@ -4,6 +4,41 @@ Description: PeopleSoft
 Author: Gary Furash
 TitleMatch: 
 Patterns:
+- LLPart1: /******************************************************************************
+ *
+ *****************************************************************************/
+  LLPart2: peoplecode - java block comment
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: /**
+ * << description >>
+ *
+ * @param
+ * @return
+ * @exception none
+ */
+method [[Input=Method_Name]]
+  throw create DDC_UTILITY:EXCEPTION:NotImplementedException("[[Input=Method_Name]]", "ClassName")
+end-method;
+  LLPart2: peoplecode - method
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: COALESCE(( SELECT XL.FIELDVALUE + ': ' + XL.XLATLONGNAME FROM PSXLATITEM XL
+         WHERE XL.FIELDNAME  = '[[Input=FieldName]]'
+           AND XL.FIELDVALUE = [[Input=SourceAlias]].[[Input=FieldName]]
+           AND XL.EFFDT      = (
+                    SELECT MAX(XL_ED.EFFDT)
+                    FROM PSXLATITEM XL_ED
+                    WHERE XL_ED.FIELDNAME  = XL.FIELDNAME
+                      AND XL_ED.FIELDVALUE = XL.FIELDVALUE
+                      AND XL_ED.EFFDT      <= GETDATE()
+               ) ), 'None') AS [[Input=FieldName]]
+  LLPart2: peoplesoft sql - get translate value
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
 - LLPart1: [[DateTime=MM/dd/yyyy]] gffurash [[INPUT=Request ID]] - [[INPUT=Comment]]
   LLPart2: peoplecode - history comment
   LLKey: 
@@ -77,20 +112,6 @@ end-method;
   LLKey: 
   LLShorthand: 
   LLScript: 
-- LLPart1: /**
- * << description >>
- *
- * @param
- * @return
- * @exception none
- */
-method [[Input=Method_Name]]
-  throw create DDC_UTILITY:EXCEPTION:NotImplementedException("[[Input=Method_Name]]", "ClassName")
-end-method;
-  LLPart2: peoplecode - method
-  LLKey: 
-  LLShorthand: 
-  LLScript: 
 - LLPart1: REM import DDC_UTILITY:EXCEPTION:IllegalArgumentException;
 REM import DDC_UTILITY:EXCEPTION:NotImplementedException;
 
@@ -159,27 +180,6 @@ end-method;
  * PROPERTIES (SET)
  *****************************************************************************/
   LLPart2: peoplecode - class template
-  LLKey: 
-  LLShorthand: 
-  LLScript: 
-- LLPart1: COALESCE(( SELECT XL.FIELDVALUE + ': ' + XL.XLATLONGNAME FROM PSXLATITEM XL
-         WHERE XL.FIELDNAME  = '[[Input=FieldName]]'
-           AND XL.FIELDVALUE = [[Input=SourceAlias]].[[Input=FieldName]]
-           AND XL.EFFDT      = (
-                    SELECT MAX(XL_ED.EFFDT)
-                    FROM PSXLATITEM XL_ED
-                    WHERE XL_ED.FIELDNAME  = XL.FIELDNAME
-                      AND XL_ED.FIELDVALUE = XL.FIELDVALUE
-                      AND XL_ED.EFFDT      <= GETDATE()
-               ) ), 'None') AS [[Input=FieldName]]
-  LLPart2: peoplesoft sql - get translate value
-  LLKey: 
-  LLShorthand: 
-  LLScript: 
-- LLPart1: /******************************************************************************
- *
- *****************************************************************************/
-  LLPart2: peoplecode - java block comment
   LLKey: 
   LLShorthand: 
   LLScript: 

@@ -18,30 +18,6 @@ end-method;
   LLKey: 
   LLShorthand: 
   LLScript: 
-- LLPart1: COALESCE(( SELECT XL.FIELDVALUE + ': ' + XL.XLATLONGNAME FROM PSXLATITEM XL
-         WHERE XL.FIELDNAME  = '[[Input=FieldName]]'
-           AND XL.FIELDVALUE = [[Input=SourceAlias]].[[Input=FieldName]]
-           AND XL.EFFDT      = (
-                    SELECT MAX(XL_ED.EFFDT)
-                    FROM PSXLATITEM XL_ED
-                    WHERE XL_ED.FIELDNAME  = XL.FIELDNAME
-                      AND XL_ED.FIELDVALUE = XL.FIELDVALUE
-                      AND XL_ED.EFFDT      <= GETDATE()
-               ) ), 'None') AS [[Input=FieldName]]
-  LLPart2: peoplesoft sql - get translate value
-  LLKey: 
-  LLShorthand: 
-  LLScript: 
-- LLPart1: [[DateTime=MM/dd/yyyy]] gffurash [[INPUT=Request ID]] - [[INPUT=Comment]]
-  LLPart2: peoplecode - history comment
-  LLKey: 
-  LLShorthand: 
-  LLScript: 
-- LLPart1: WriteToLog(%ApplicationLogFence_Error, &Err.ToString());
-  LLPart2: peoplecode - writetolog
-  LLKey: 
-  LLShorthand: 
-  LLScript: 
 - LLPart1: import TTS_UNITTEST:TestBase;
 import [[Input=PackagePath]]:[[Input=ClassUnderTest]];
 
@@ -180,6 +156,30 @@ end-method;
  *
  *****************************************************************************/
   LLPart2: peoplecode - java block comment
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: COALESCE(( SELECT XL.FIELDVALUE + ': ' + XL.XLATLONGNAME FROM PSXLATITEM XL
+         WHERE XL.FIELDNAME  = '[[Input=FieldName]]'
+           AND XL.FIELDVALUE = [[Input=SourceAlias]].[[Input=FieldName]]
+           AND XL.EFFDT      = (
+                    SELECT MAX(XL_ED.EFFDT)
+                    FROM PSXLATITEM XL_ED
+                    WHERE XL_ED.FIELDNAME  = XL.FIELDNAME
+                      AND XL_ED.FIELDVALUE = XL.FIELDVALUE
+                      AND XL_ED.EFFDT      <= GETDATE()
+               ) ), 'None') AS [[Input=FieldName]]
+  LLPart2: peoplesoft sql - get translate value
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: [[DateTime=MM/dd/yyyy]] gffurash [[INPUT=Request ID]] - [[INPUT=Comment]]
+  LLPart2: peoplecode - history comment
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: WriteToLog(%ApplicationLogFence_Error, &Err.ToString());
+  LLPart2: peoplecode - writetolog
   LLKey: 
   LLShorthand: 
   LLScript: 

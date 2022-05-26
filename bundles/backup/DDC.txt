@@ -14,13 +14,18 @@ Patterns:
   LLKey: 
   LLShorthand: 
   LLScript: 
-- LLPart1: Application Administrators
-  LLPart2: person - aa
+- LLPart1: Please refresh database [[Choice=HRDEV92|HRTST92|HRSTG92|HRSUP92|FSDEV92|FSTST92|FSSTG92|FSSUP92]] on [[Choice=CPSDEVDB01|CPSSTGDB01]] from the [[Choice=NEW copy|latest standard backup]] of [[Choice=HRPRD92|FSPRD92]] on CPSPRDDB01. Before doing so please VERIFY that a valid recent backup exists of the environment being OVEWRITTEN. The application server (should) be shut down. Please contact me (Gary Furash) when complete.
+  LLPart2: text - refresh database
   LLKey: 
   LLShorthand: 
   LLScript: 
-- LLPart1: Please refresh database [[Choice=HRDEV92|HRTST92|HRSTG92|HRSUP92|FSDEV92|FSTST92|FSSTG92|FSSUP92]] on [[Choice=CPSDEVDB01|CPSSTGDB01]] from the [[Choice=NEW copy|latest standard backup]] of [[Choice=HRPRD92|FSPRD92]] on CPSPRDDB01. Before doing so please VERIFY that a valid recent backup exists of the environment being OVEWRITTEN. The application server (should) be shut down. Please contact me (Gary Furash) when complete.
-  LLPart2: text - refresh database
+- LLPart1: [[Input=ServerName]].desertdiamondcasino.com
+  LLPart2: fully qualified server name
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: Application Administrators
+  LLPart2: person - aa
   LLKey: 
   LLShorthand: 
   LLScript: 
@@ -182,9 +187,3 @@ If she uses INTERNET EXPLORER
   LLKey: 
   LLShorthand: 
   LLScript: 
-
-- LLPart1: [[Input=ServerName]].desertdiamondcasino.com
-  LLPart2: fully qualified server name
-  LLKey: 
-  LLShorthand: 
-  LLScript:
