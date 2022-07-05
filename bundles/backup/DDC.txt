@@ -4,48 +4,8 @@ Description: DDC Custom Snippets (not code)
 Author: Gary furash
 TitleMatch: 
 Patterns:
-- LLPart1: https://cpsfsstgweb01.desertdiamondcasino.com:8073/psp/fssup/?cmd=logout
-  LLPart2: url - PeopleSoft FS 9.2 Support
-  LLKey: 
-  LLShorthand: 
-  LLScript: 
-- LLPart1: http://cpshrstgweb01.desertdiamondcasino.com:9070/psp/hrsup/EMPLOYEE/HRMS/?cmd=logout
-  LLPart2: url - PeopleSoft HR 9.2 Support
-  LLKey: 
-  LLShorthand: 
-  LLScript: 
-- LLPart1: Please refresh database [[Choice=HRDEV92|HRTST92|HRSTG92|HRSUP92|FSDEV92|FSTST92|FSSTG92|FSSUP92]] on [[Choice=CPSDEVDB01|CPSSTGDB01]] from the [[Choice=NEW copy|latest standard backup]] of [[Choice=HRPRD92|FSPRD92]] on CPSPRDDB01. Before doing so please VERIFY that a valid recent backup exists of the environment being OVEWRITTEN. The application server (should) be shut down. Please contact me (Gary Furash) when complete.
-  LLPart2: text - refresh database
-  LLKey: 
-  LLShorthand: 
-  LLScript: 
-- LLPart1: [[Input=ServerName]].desertdiamondcasino.com
-  LLPart2: fully qualified server name
-  LLKey: 
-  LLShorthand: 
-  LLScript: 
-- LLPart1: Application Administrators
-  LLPart2: person - aa
-  LLKey: 
-  LLShorthand: 
-  LLScript: 
 - LLPart1: https://cpsfsprdweb01.desertdiamondcasino.com:8050/psp/fsprd/EMPLOYEE/ERP/?cmd=logout
   LLPart2: url - peoplesoft fs 9.2 production
-  LLKey: 
-  LLShorthand: 
-  LLScript: 
-- LLPart1: https://cpsfsstgweb01.desertdiamondcasino.com:8053/psp/fsstg/EMPLOYEE/ERP/?cmd=logout
-  LLPart2: url - PeopleSoft FS 9.2 Staging
-  LLKey: 
-  LLShorthand: 
-  LLScript: 
-- LLPart1: Gary Furash - IT PeopleSoft Developer - gffurash@ddcaz.com - 520-342-1641 (w), 520-907-2470 (m)
-  LLPart2: text - short work signature
-  LLKey: 
-  LLShorthand: 
-  LLScript: 
-- LLPart1: 520-342-1641
-  LLPart2: info - work phone
   LLKey: 
   LLShorthand: 
   LLScript: 
@@ -75,13 +35,58 @@ Additional Notes:
   LLKey: 
   LLShorthand: 
   LLScript: 
+- LLPart1: https://cpsfsstgweb01.desertdiamondcasino.com:8053/psp/fsstg/EMPLOYEE/ERP/?cmd=logout
+  LLPart2: url - PeopleSoft FS 9.2 Staging
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: pjejurikar@gravitonconsulting.com; kchahar@gravitonconsulting.com; nmrinal@gravitonconsulting.com; athakar@gravitonconsulting.com; ssridharan@gravitonconsulting.com; vmamnani@gravitonconsulting.com; cvij@gravitonconsulting.com; zmartin@gravitonconsulting.com;jkok@gravitonconsulting.com;aperez@gravitonconsulting.com;gdinoso@gravitonconsulting.com
+  LLPart2: email - graviton
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: Please refresh database [[Choice=HRDEV92|HRTST92|HRSTG92|HRSUP92|FSDEV92|FSTST92|FSSTG92|FSSUP92]] on [[Choice=CPSDEVDB01|CPSSTGDB01]] from the [[Choice=NEW copy|latest standard backup]] of [[Choice=HRPRD92|FSPRD92]] on CPSPRDDB01. Before doing so please VERIFY that a valid recent backup exists of the environment being OVEWRITTEN. The application server (should) be shut down. Please contact me (Gary Furash) when complete.
+  LLPart2: text - refresh database
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: https://cpshrstgweb01.desertdiamondcasino.com:8075/psp/hrstg/?cmd=login&languageCd=ENG&
+  LLPart2: url - PeopleSoft HR 9.2 Staging
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: http://cpshrstgweb01.desertdiamondcasino.com:9070/psp/hrsup/EMPLOYEE/HRMS/?cmd=logout
+  LLPart2: url - PeopleSoft HR 9.2 Support
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: https://cpsfsstgweb01.desertdiamondcasino.com:8073/psp/fssup/?cmd=logout
+  LLPart2: url - PeopleSoft FS 9.2 Support
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: Gary Furash - IT PeopleSoft Developer - gffurash@ddcaz.com - 520-342-1641 (w), 520-907-2470 (m)
+  LLPart2: text - short work signature
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: 520-342-1641
+  LLPart2: info - work phone
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
 - LLPart1: https://cpsfsdevweb01.desertdiamondcasino.com:8083/psp/fstst/EMPLOYEE/ERP/?cmd=logout
   LLPart2: url - PeopleSoft FS 9.2 Test
   LLKey: 
   LLShorthand: 
   LLScript: 
-- LLPart1: pjejurikar@gravitonconsulting.com; kchahar@gravitonconsulting.com; nmrinal@gravitonconsulting.com; athakar@gravitonconsulting.com; ssridharan@gravitonconsulting.com; vmamnani@gravitonconsulting.com; cvij@gravitonconsulting.com; zmartin@gravitonconsulting.com;jkok@gravitonconsulting.com
-  LLPart2: email - graviton 9.2
+- LLPart1: [[Input=ServerName]].desertdiamondcasino.com
+  LLPart2: fully qualified server name
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: Application Administrators
+  LLPart2: person - aa
   LLKey: 
   LLShorthand: 
   LLScript: 
@@ -114,11 +119,6 @@ If you get the error “Duplicate instances of node name …” click OK and ski
   LLScript: 
 - LLPart1: 8520342
   LLPart2: text - ddc phone prefix
-  LLKey: 
-  LLShorthand: 
-  LLScript: 
-- LLPart1: https://cpshrstgweb01.desertdiamondcasino.com:8075/psp/hrstg/?cmd=login&languageCd=ENG&
-  LLPart2: url - PeopleSoft HR 9.2 Staging
   LLKey: 
   LLShorthand: 
   LLScript: 

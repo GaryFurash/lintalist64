@@ -4,13 +4,79 @@ Description: General SQL Snippets
 Author: Gary Furash
 TitleMatch: 
 Patterns:
-- LLPart1: SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED;
-  LLPart2: SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED;
+- LLPart1: BEGIN TRANSACTION;
+
+SET XACT_ABORT ON;
+
+
+
+ROLLBACK;
+--COMMIT;
+  LLPart2: sql - simple transaction
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: DECLARE @ErrMsg NVarChar(4000), 
+        @ErrNum Int, 
+        @ErrSeverity Int, 
+        @ErrState Int, 
+        @ErrLine Int, 
+        @ErrProc NVarChar(200),
+        @MessageText NVarChar(4000),
+        @RowCount int;
+    
+BEGIN TRY
+    BEGIN TRANSACTION T1;
+
+    SET @RowCount = 1; /* @@RowCount */
+
+    IF @@ROWCOUNT <> 1
+    BEGIN
+        SET @MessageText = N'Incorrect number of DDC_COVID_EMP2 updated' + CAST(@@ROWCOUNT AS VARCHAR(10));
+        THROW 50000, @MessageText, 0;
+    END
+    ELSE
+        PRINT N'DDC_COVID_EMP2 Rows updated: ' + CAST(@@ROWCOUNT AS VARCHAR(10));
+
+    IF @@ROWCOUNT > 2
+        THROW 50000, 'Too many DDC_COVID_INST deleted', 0;
+    ELSE
+        PRINT N'DDC_COVID_INST Rows Deleted: ' + CAST (@@ROWCOUNT AS VARCHAR(10));
+        
+    COMMIT TRANSACTION T1
+END TRY
+BEGIN CATCH
+    SELECT @ErrNum = Error_Number(), 
+           @ErrSeverity = Error_Severity(), 
+           @ErrState = Error_State(), 
+           @ErrLine = Error_Line(), 
+           @ErrProc = IsNull(Error_Procedure(), '-')
+
+    SET @ErrMsg = N'ErrLine: ' + rtrim(@ErrLine) + ', proc: ' + RTRIM(@ErrProc) + ', 
+           Message: '+ Error_Message()
+
+    PRINT N'ROLLBACK: ' + SUBSTRING(@ErrMsg,1,4000)
+
+    ROLLBACK TRANSACTION T1;
+END CATCH;
+  LLPart2: sql - transaction-aware update
   LLKey: 
   LLShorthand: 
   LLScript: 
 - LLPart1: if object_id('tempdb..#[[Input=name]]') is not null drop table #[[Input=name]]
   LLPart2: sql - drop temporary table
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED;
+  LLPart2: SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED;
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: -------------------------------------------------------------------------------
+--
+-------------------------------------------------------------------------------
+  LLPart2: sql - Block Comment
   LLKey: 
   LLShorthand: 
   LLScript: 
@@ -84,13 +150,6 @@ AND stop_execution_date is null;
   LLKey: 
   LLShorthand: 
   LLScript: 
-- LLPart1: -------------------------------------------------------------------------------
---
--------------------------------------------------------------------------------
-  LLPart2: sql - Block Comment
-  LLKey: 
-  LLShorthand: 
-  LLScript: 
 - LLPart1: /*************************************************************************
      *  Definition: 
      * Description: 
@@ -105,65 +164,6 @@ AND stop_execution_date is null;
      * [[DateTime=yyyy-MM-dd]]  Gary Furash         Created
      *************************************************************************/
   LLPart2: sql - program comment
-  LLKey: 
-  LLShorthand: 
-  LLScript: 
-- LLPart1: BEGIN TRANSACTION;
-
-SET XACT_ABORT ON;
-
-
-
-ROLLBACK;
---COMMIT;
-  LLPart2: sql - simple transaction
-  LLKey: 
-  LLShorthand: 
-  LLScript: 
-- LLPart1: DECLARE @ErrMsg NVarChar(4000), 
-        @ErrNum Int, 
-        @ErrSeverity Int, 
-        @ErrState Int, 
-        @ErrLine Int, 
-        @ErrProc NVarChar(200),
-        @MessageText NVarChar(4000),
-        @RowCount int;
-    
-BEGIN TRY
-    BEGIN TRANSACTION T1;
-
-    SET @RowCount = 1; /* @@RowCount */
-
-    IF @@ROWCOUNT <> 1
-    BEGIN
-        SET @MessageText = N'Incorrect number of DDC_COVID_EMP2 updated' + CAST(@@ROWCOUNT AS VARCHAR(10));
-        THROW 50000, @MessageText, 0;
-    END
-    ELSE
-        PRINT N'DDC_COVID_EMP2 Rows updated: ' + CAST(@@ROWCOUNT AS VARCHAR(10));
-
-    IF @@ROWCOUNT > 2
-        THROW 50000, 'Too many DDC_COVID_INST deleted', 0;
-    ELSE
-        PRINT N'DDC_COVID_INST Rows Deleted: ' + CAST (@@ROWCOUNT AS VARCHAR(10));
-        
-    COMMIT TRANSACTION T1
-END TRY
-BEGIN CATCH
-    SELECT @ErrNum = Error_Number(), 
-           @ErrSeverity = Error_Severity(), 
-           @ErrState = Error_State(), 
-           @ErrLine = Error_Line(), 
-           @ErrProc = IsNull(Error_Procedure(), '-')
-
-    SET @ErrMsg = N'ErrLine: ' + rtrim(@ErrLine) + ', proc: ' + RTRIM(@ErrProc) + ', 
-           Message: '+ Error_Message()
-
-    PRINT N'ROLLBACK: ' + SUBSTRING(@ErrMsg,1,4000)
-
-    ROLLBACK TRANSACTION T1;
-END CATCH;
-  LLPart2: sql - transaction-aware update
   LLKey: 
   LLShorthand: 
   LLScript: 

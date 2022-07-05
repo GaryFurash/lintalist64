@@ -14,13 +14,13 @@ Patterns:
   LLKey: 
   LLShorthand: 
   LLScript: 
-- LLPart1: Priscilla Siquieros
-  LLPart2: contact - psi
+- LLPart1: Diane Matsumoto
+  LLPart2: contact - dma
   LLKey: 
   LLShorthand: 
   LLScript: 
-- LLPart1: Diane Matsumoto
-  LLPart2: contact - dma
+- LLPart1: Priscilla Siquieros
+  LLPart2: contact - psi
   LLKey: 
   LLShorthand: 
   LLScript: 

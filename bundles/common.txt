@@ -4,8 +4,13 @@ Description: Common replacements
 Author: Gary furash
 TitleMatch: 
 Patterns:
-- LLPart1: [[DateTime=yyyy-MM-dd HH:mm]] -
-  LLPart2: date - journal
+- LLPart1: 📝
+  LLPart2: character - note
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: [[DateTime=yyyy-MM-dd]]
+  LLPart2: date - yyyy-MM-dd
   LLKey: 
   LLShorthand: 
   LLScript: 
@@ -14,13 +19,43 @@ Patterns:
   LLKey: 
   LLShorthand: 
   LLScript: 
+- LLPart1: [[DateTime=yyyy-MM-dd HH:mm]] -
+  LLPart2: date - journal
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: [[Selected=Lower]]
+  LLPart2: selection - lower case
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: ➡
+  LLPart2: character - arrow right
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
 - LLPart1: 🔺
   LLPart2: character - delta
   LLKey: 
   LLShorthand: 
   LLScript: 
-- LLPart1: [[DateTime=yyyy-MM-dd]]
-  LLPart2: date - yyyy-MM-dd
+- LLPart1: [[Selected=Upper]]
+  LLPart2: selection - upper case
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: Look into
+  LLPart2: text - li
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: ☑
+  LLPart2: character - checkmark
+  LLKey: 
+  LLShorthand: 
+  LLScript: 
+- LLPart1: ☐
+  LLPart2: character - checkbox
   LLKey: 
   LLShorthand: 
   LLScript: 
@@ -44,28 +79,8 @@ Patterns:
   LLKey: 
   LLShorthand: 
   LLScript: 
-- LLPart1: [[Selected=Lower]]
-  LLPart2: selection - lower case
-  LLKey: 
-  LLShorthand: 
-  LLScript: 
-- LLPart1: [[Selected=Upper]]
-  LLPart2: selection - upper case
-  LLKey: 
-  LLShorthand: 
-  LLScript: 
 - LLPart1: 📎
   LLPart2: character - clipped
-  LLKey: 
-  LLShorthand: 
-  LLScript: 
-- LLPart1: ➡
-  LLPart2: character - arrow right
-  LLKey: 
-  LLShorthand: 
-  LLScript: 
-- LLPart1: ☐
-  LLPart2: character - checkbox
   LLKey: 
   LLShorthand: 
   LLScript: 
@@ -94,18 +109,8 @@ Patterns:
   LLKey: 
   LLShorthand: 
   LLScript: 
-- LLPart1: ☑
-  LLPart2: character - checkmark
-  LLKey: 
-  LLShorthand: 
-  LLScript: 
 - LLPart1: 4771 North Warner Terrace, Tucson Arizona 85705
   LLPart2: info - home address
-  LLKey: 
-  LLShorthand: 
-  LLScript: 
-- LLPart1: Look into
-  LLPart2: text - li
   LLKey: 
   LLShorthand: 
   LLScript: 
@@ -121,11 +126,6 @@ Patterns:
   LLScript: 
 - LLPart1: ⚡
   LLPart2: character - problem or error
-  LLKey: 
-  LLShorthand: 
-  LLScript: 
-- LLPart1: 📝
-  LLPart2: character - note
   LLKey: 
   LLShorthand: 
   LLScript: 
